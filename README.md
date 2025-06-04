@@ -13,4 +13,4 @@ In addition, we will provide an option to assign output values to the graph's no
 ## Compilation and Execution
 
 ## Authors
-@ AmitLevyTzedek
+@AmitLevyTzedek
