@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Computation Graph</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style type="text/css">
+        #graph {
+            width: 100%;
+            height: 100vh;
+            border: 1px solid #ddd;
+            background-color: white;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div id="graph"></div>
+
+<script type="text/javascript">
+    // Create a network
+    var container = document.getElementById('graph');
+
+    // Provide the data in the vis format
+    var nodes = new vis.DataSet([
+        /*NODES*/
+    ]);
+
+    var edges = new vis.DataSet([
+        /*EDGES*/
+    ]);
+
+    // Provide the data and options
+    var data = {
+        nodes: nodes,
+        edges: edges
+    };
+
+    var options = {
+        nodes: {
+            font: {
+                size: 16,
+                multi: true,
+                face: 'Arial',
+                color: '#333333'
+            },
+            size: 40,
+            borderWidth: 2,
+            shadow: true,
+            shape: 'box',
+            margin: 10
+        },
+        edges: {
+            width: 3,
+            color: {
+                color: '#2B7CE9',
+                highlight: '#1B4B99',
+                hover: '#1B4B99'
+            },
+            smooth: {
+                type: 'curvedCW',
+                roundness: 0.2
+            },
+            arrows: {
+                to: {
+                    enabled: true,
+                    scaleFactor: 1.5,
+                    type: 'arrow'
+                }
+            },
+            shadow: true
+        },
+        physics: {
+            enabled: true,
+            solver: 'forceAtlas2Based',
+            forceAtlas2Based: {
+                gravitationalConstant: -200,
+                springLength: 300,
+                springConstant: 0.05,
+                damping: 0.4
+            },
+            stabilization: {
+                enabled: true,
+                iterations: 1000,
+                updateInterval: 25
+            }
+        },
+        layout: {
+            improvedLayout: true,
+            hierarchical: {
+                enabled: false
+            }
+        },
+        interaction: {
+            hover: true,
+            tooltipDelay: 200
+        }
+    };
+
+    // Create the network
+    var network = new vis.Network(container, data, options);
+
+    // Add event listeners for better interaction
+    network.on("stabilizationProgress", function(params) {
+        console.log('Stabilization progress:', params.iterations, '/', params.total);
+    });
+
+    network.on("stabilizationIterationsDone", function() {
+        console.log('Stabilization finished');
+    });
+</script>
+</body>
+</html>
