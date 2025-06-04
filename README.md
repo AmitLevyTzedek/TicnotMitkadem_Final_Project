@@ -9,3 +9,7 @@ The website will allow users to upload text files, which will then be processed 
 
 In addition, we will provide an option to assign output values to the graph's nodes and display both the inputs and outputs in a table, showcasing the graph's computations clearly.
 
+
+## Compilation and Execution
+
+## Authors
