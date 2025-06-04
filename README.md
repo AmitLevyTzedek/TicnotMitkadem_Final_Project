@@ -2,6 +2,7 @@
 
 ## background
 This project is the final project for the Advanced Programming course at Bar-Ilan University, Faculty of Engineering.
+
 In this project, we aim to implement and create a server that can be accessed remotely via a web browser.
 Our goal is to design and build a fully functional and visually appealing website using all the components and techniques covered throughout the course.
 
