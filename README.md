@@ -1,6 +1,6 @@
 # TicnotMitkadem_Final_Project
 
-## background
+## Background
 This project is the final project for the Advanced Programming course at Bar-Ilan University, Faculty of Engineering.
 
 In this project, we aim to implement and create a server that can be accessed remotely via a web browser.
