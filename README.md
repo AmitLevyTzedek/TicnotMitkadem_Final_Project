@@ -65,7 +65,7 @@ This project implements a topic management system with the following key feature
 1. Clone the repository:
 ```bash
 git clone https://github.com/AmitLevyTzedek/TicnotMitkadem_Final_Project
-unzip  finalProject2025.zip
+unzip  finalProj2025.zip
 cd tichnotmitkadm1
 ```
 2. Create necessary directories:
