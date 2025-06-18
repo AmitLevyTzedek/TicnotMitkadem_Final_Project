@@ -62,24 +62,25 @@ This project implements a topic management system with the following key feature
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/AmitLevyTzedek/TicnotMitkadem_Final_Project
-unzip  finalProj2025.zip
-cd tichnotmitkadm1
-```
-2. Create necessary directories:
-```bash
-mkdir -p html_files uploads out
-```
+1.  *Download the Project*:
+    *   Obtain the project archive (e.g., a .zip file) from its source.
+    *   Extract the contents of the archive to your desired location on your computer. You should have a folder named finalProj2025 or similar containing the project files, including tichnotmitkadm1.
 
-3. Compile the project:
+2.  *Navigate to the Project Directory*:
+    *   Open your terminal or command prompt.
+    *   Change your current directory to the root of the extracted project. For example, if you extracted it to your Desktop, you would navigate to:
+        bash
+        cd C:\Users\USER\Desktop\finalProj2025
+        
+        Then, navigate into the project's main module:
+        bash
+        cd tichnotmitkadm1
+
+3. *Run & Compile the project*:
 ```bash
 # Using javac
-javac -d out src/**/*.java
-
-# Or using Maven (if pom.xml is present)
-mvn clean install
+javac -d out -sourcepath src src/configs/.java src/graph/.java src/server/.java src/servlets/.java src/views/*.java
+java -cp out views.Main
 ```
 
 ### Running the Application
